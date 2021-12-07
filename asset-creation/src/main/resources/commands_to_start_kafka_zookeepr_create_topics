@@ -1,0 +1,18 @@
+C:\KAFKA\kafka_2.12-2.6.1>.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+create topic;
+
+start producer
+C:\KAFKA\kafka_2.12-2.6.1>.\bin\windows\kafka-console-producer.bat --bootstrap-server localhost:9092 --topic test
+
+
+start consumer
+C:\KAFKA\kafka_2.12-2.6.1>.\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test --from-beginning
+
+
+create topic one:
+C:\KAFKA\kafka_2.12-2.6.1>.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test
+
+create topic 2:
+C:\KAFKA\kafka_2.12-2.6.1>.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic users-log
+
